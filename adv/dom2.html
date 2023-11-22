@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM create an element</title>
+</head>
+<body>
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(lang){
+        const li = document.createElement('li');
+        li.innerHTML= `${lang}`;
+        document.querySelector(`.language`).appendChild(li);
+    }
+    addLanguage("python");
+    function addOptLanguage(lang){
+       const li = document.createElement('li');
+       li.appendChild(document.createTextNode(`${lang}`));
+       document.body.querySelector(`.language`).appendChild(li);   
+    }
+    addOptLanguage(`GoLang`);
+</script>
+</html>
